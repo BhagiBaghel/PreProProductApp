@@ -1,0 +1,42 @@
+<h1>Product Details 
+    <span>
+    <a routerLink="add"><button mat-icon-button ><mat-icon>add_circle</mat-icon></button></a> 
+    </span>
+</h1>
+
+<br>
+<div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Product Id</th>
+            <th>Product Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th>Image</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of productDetails">
+            <td>{{product.id}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.description}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.quantity}}</td>
+            <td>{{product.price * product.quantity | currency}}</td>
+
+            <img [src]="imgUrl" alt="">
+            
+            <td>
+                <a routerLink="update/{{product.id}}"><button mat-icon-button (click)="updateProduct(product)"><mat-icon>edit</mat-icon></button></a> 
+            <td>
+                <button mat-icon-button (click)="deleteProduct(product.id)"><mat-icon>delete</mat-icon></button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>

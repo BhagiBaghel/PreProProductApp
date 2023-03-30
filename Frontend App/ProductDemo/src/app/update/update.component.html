@@ -1,0 +1,31 @@
+<div class="container">
+    <h2>Update Product details here!</h2>
+    <br>
+    <form action>
+        <div class="form-froup">
+            <label for="product-id">Product Id</label>
+            <input type="number" class="form-control" id="product-id" [(ngModel)]="productData.id" name="productId" />
+        </div>
+        <div class="form-froup">
+            <label for="product-name">Product name</label>
+            <input type="text" class="form-control" id="product-name" [(ngModel)]="productData.name" name="productName" />
+        </div>
+        <div class="form-froup">
+            <label for="product-desc">Description</label>
+            <input type="text" class="form-control" id="product-desc" [(ngModel)]="productData.description" name="productDesc" />
+        </div>
+        <div class="form-froup">
+            <label for="product-price">Product price</label>
+            <input type="number" class="form-control" id="product-price" [(ngModel)]="productData.price" name="productPrice" />
+        </div>
+        <div class="form-froup">
+            <label for="product-quantity">Product Quantity</label>
+            <input type="number" class="form-control" id="product-quantity" [(ngModel)]="productData.quantity" name="productQuantity" />
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary" (click)="updateProduct()">Update</button>
+        </div>
+
+    </form> 
+</div>
+
